@@ -11,13 +11,13 @@ export function EmployeeCard({ employee }: { employee: EmployeeListItem }) {
   return (
     <Card className="group h-full overflow-hidden transition duration-200 hover:-translate-y-1 hover:border-accent/30">
       <CardHeader>
-        <div className="flex items-start justify-between gap-4">
-          <div>
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0 flex-1">
             <p className="text-xs uppercase tracking-[0.35em] text-sky-300/70">Employee</p>
-            <CardTitle className="mt-2 text-2xl">{employee.name}</CardTitle>
-            <CardDescription>{employee.position}</CardDescription>
+            <CardTitle className="mt-2 text-2xl truncate">{employee.name}</CardTitle>
+            <CardDescription className="truncate">{employee.position}</CardDescription>
           </div>
-          <div className="text-right">
+          <div className="text-right flex-shrink-0">
             <p className="text-xs uppercase tracking-[0.25em] text-slate-500">Salary</p>
             <p className="mt-2 text-lg font-semibold text-slate-50">{formatCurrency(employee.salary)}</p>
           </div>
@@ -38,13 +38,13 @@ export function EmployeeCard({ employee }: { employee: EmployeeListItem }) {
         </p>
       </CardContent>
 
-      <CardFooter className="flex items-center justify-between">
-        <span className="text-xs uppercase tracking-[0.25em] text-slate-500">
-          {employee.department?.slug ?? 'unassigned'}
+      <CardFooter className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <span className="text-xs uppercase tracking-[0.25em] text-slate-500 truncate max-w-[100%] sm:max-w-[45%]">
+          {employee.department?.slug.toUpperCase() ?? 'UNASSIGNED'}
         </span>
         <Link
           href={ROUTES.employeeDetail(employee.id)}
-          className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/20"
+          className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/20 w-full sm:w-auto justify-center"
         >
           View details
         </Link>

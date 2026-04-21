@@ -23,11 +23,11 @@ export default async function EmployeeDetailPage({
 
     return (
       <div className="mx-auto max-w-4xl space-y-6">
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <Link href={ROUTES.home} className="text-sm text-sky-300 underline-offset-4 hover:underline">
             ← Back to directory
           </Link>
-          <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.25em] text-slate-400">
+          <span className="self-start rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.25em] text-slate-400">
             Employee detail
           </span>
         </div>

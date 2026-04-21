@@ -66,7 +66,7 @@ export default async function Home({
 
   return (
     <div className="space-y-8">
-      <section className="grid gap-6 xl:grid-cols-[1.25fr_0.75fr]">
+      <section className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
         <Card className="overflow-hidden">
           <CardHeader className="space-y-5">
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-accent/25 bg-accent/10 px-3 py-1 text-[11px] uppercase tracking-[0.35em] text-accent">
@@ -127,7 +127,7 @@ export default async function Home({
 
       <DepartmentFilter departments={departments} />
 
-      <div className="grid gap-6 xl:grid-cols-[0.82fr_1.18fr]">
+      <div className="grid gap-6 lg:grid-cols-[0.82fr_1.18fr]">
         <AddEmployeeForm departments={departments} />
 
         <Card className="overflow-hidden">

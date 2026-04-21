@@ -24,7 +24,7 @@ export function DepartmentFilter({ departments }: { departments: DepartmentSumma
 
   return (
     <section className="rounded-[28px] border border-white/10 bg-[color:var(--panel)] p-5 shadow-[0_24px_80px_rgba(0,0,0,0.2)] backdrop-blur-xl">
-      <div className="flex flex-wrap items-center justify-between gap-3">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
           <p className="text-xs uppercase tracking-[0.35em] text-sky-300/70">Department filter</p>
           <h2 className="mt-2 text-xl font-semibold text-slate-50">Refine the directory by team</h2>

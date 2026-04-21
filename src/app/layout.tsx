@@ -19,9 +19,9 @@ export default function RootLayout({
       <body>
         <div className="relative isolate min-h-screen overflow-hidden">
           <div className="pointer-events-none absolute inset-0 -z-10">
-            <div className="absolute left-[-12rem] top-[-8rem] h-80 w-80 rounded-full bg-sky-500/10 blur-3xl" />
-            <div className="absolute right-[-8rem] top-[18rem] h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
-            <div className="absolute bottom-[-10rem] left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-slate-400/5 blur-3xl" />
+            <div className="absolute left-[-8rem] top-[-6rem] h-64 w-64 rounded-full bg-sky-500/10 blur-3xl sm:left-[-12rem] sm:top-[-8rem] sm:h-80 sm:w-80" />
+            <div className="absolute right-[-6rem] top-[12rem] h-56 w-56 rounded-full bg-cyan-400/10 blur-3xl sm:right-[-8rem] sm:top-[18rem] sm:h-72 sm:w-72" />
+            <div className="absolute bottom-[-8rem] left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-slate-400/5 blur-3xl sm:bottom-[-10rem] sm:h-80 sm:w-80" />
           </div>
 
           <header className="sticky top-0 z-20 border-b border-white/8 bg-slate-950/40 backdrop-blur-xl">
@@ -30,9 +30,12 @@ export default function RootLayout({
                 <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-accent/30 bg-accent/10 text-sm font-semibold text-accent transition group-hover:bg-accent/20">
                   ED
                 </span>
-                <span>
+                <span className="hidden sm:block">
                   <span className="block text-sm uppercase tracking-[0.35em] text-sky-300/70">SPACE Al</span>
                   <span className="block text-base font-semibold text-slate-50">Employee Directory</span>
+                </span>
+                <span className="block text-base font-semibold text-slate-50 sm:hidden">
+                  Employee Directory
                 </span>
               </Link>
 
